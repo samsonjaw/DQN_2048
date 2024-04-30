@@ -32,6 +32,25 @@ class game_2048():
 - **Prioritized Experience Replay(PER)**: Experiences stored in the replay buffer are assigned priorities based on their estimated importance or potential for learning. When sampling experiences, the agent can focus on significant experiences.
 - **Double Deep Q-Learning(DDQN)**: In traditional DQN, the same network(evalutation-network) is used to both choose and evaluate actions, which can lead to overestimation of Q-values.**In DDQN**, it use evaluation-network to choose action and use targer-network to calculate the Q-values.
 
+## Project Structure
+- **run.py**: Main script to run the 2048 game and train the reinforcement learning agent.
+- **RL_brain.py**: Implementation of the Deep Q-Learning algorithm.
+- **environment_2048.py**: Environment for the 2048 game, including game mechanics and graphical interface using Pygame.
+- **SumTree.py**: Implementation of the SumTree data structure for prioritized experience replay.
+- **tb.py**: Logging module for TensorBoard visualization.
+
+## tensorboard
+1.To launch TensorBoard and visualize the logs, you can use the following command in your terminal:
+```bash
+tensorboard --logdir=logs
+```
+2. go http://localhost:6006
+   
+## network save
+After training, the trained model weights will be saved in the net/ directory. You can use these weights to evaluate the agent's performance or deploy it in a real game environment.
+
+
+
 ## Contributing
 Contributions are welcome!
 
